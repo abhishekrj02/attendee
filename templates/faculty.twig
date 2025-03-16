@@ -1,0 +1,17 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h2>Faculty List</h2>
+    <table>
+        <tr>
+            <th>Professor</th>
+            <th>Subject</th>
+        </tr>
+        {% for prof in faculty %}
+        <tr>
+            <td>{{ prof.name }}</td>
+            <td>{{ prof.subject }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h2>Courses</h2>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

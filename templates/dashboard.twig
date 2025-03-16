@@ -1,0 +1,23 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h2>Welcome, {{ student.name }} ({{ student.id }})</h2>
+    <p>Course: {{ student.course }}</p>
+    <p>Year: {{ student.year }}</p>
+
+    <h3>Recent Attendance</h3>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Subject</th>
+            <th>Status</th>
+        </tr>
+        {% for record in attendance %}
+        <tr>
+            <td>{{ record.date }}</td>
+            <td>{{ record.subject }}</td>
+            <td>{{ record.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
